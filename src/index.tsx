@@ -36,7 +36,7 @@ function returnEmptyString() {
 
 function returnDocument(element?: HTMLElement) {
   if (element) {
-    return element.ownerDocument;
+    return element.getRootNode?.() || element.ownerDocument;
   }
   return window.document;
 }
